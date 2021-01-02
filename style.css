@@ -1,0 +1,104 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 18px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 1000px;
+}
+
+.list-pane,
+.task-pane {
+  margin: 20px;
+  border: solid 1px grey;
+}
+
+ul.tasks > li,
+ul.lists > li {
+  cursor: pointer;
+}
+
+button {
+  padding: 10px;
+  background: #d9d9d9;
+  color: #555;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+button:hover {
+  background-color: #bbb;
+}
+
+input {
+  margin: 10px;
+  border: none;
+  border-radius: 0;
+  border: solid 1px #eee;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* LIST PANE */
+.list-pane {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  padding: 20px;
+}
+
+.list-pane ul {
+  margin-bottom: 30px;
+}
+.list-pane li {
+  margin: 8px;
+  list-style-type: none;
+}
+
+.list-pane div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selected {
+  font-weight: bold;
+  color: maroon;
+}
+
+/* TASK PANE */
+.task-pane {
+  width: 700px;
+}
+
+.task-pane > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-pane ul {
+  margin: 20px;
+}
+
+.task-pane li {
+  margin: 8px;
+  list-style-type: square;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.task-pane .checked {
+  text-decoration: line-through;
+  font-style: italic;
+}
